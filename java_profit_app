@@ -1,4 +1,4 @@
-/* package codechef; // don't place package name! */
+ /* package codechef; // don't place package name! */
 
 import java.util.*;
 import java.lang.*;
@@ -49,10 +49,17 @@ class Codechef
 		
 		
 		 
-		int k=(T/2) +1;
+		int k=(T/2) ;
 		
 		
-		int min =a[0];
+		int min =a[k];
+		
+		
+		
+		
+		
+		
+		
 		
 		int sum=0;
 		
