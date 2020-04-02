@@ -3,34 +3,44 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
+import java.util.Collections; 
+
 
 /* Name of the class has to be "Main" only if the class is public. */
 class Codechef
-{static int T,i;
+{static Long T,i,j;
 
-   static int num;
+   static Long num;
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		 Scanner scan = new Scanner(System.in);
 		
-		T = scan.nextInt();
+		T = scan.nextLong();
 
-		i=0;
+		i=0L;
 		
-	 	int a[]=new   int[T];
-		
-		
-		
-		
-		while(i<T)
+		if(T!=0L)
 		{
+		    
+		    
+		    
+		    
+		    
+		    
+		    Long a[]=new Long[T];
+		
+		
+		
+		
+		    while(i<T)
+	    	{
 		 
 		 
 		 
-		 		    num=scan.nextInt();
+		 		    num=scan.nextLong();
 
 		 
-		            a[i]=num;
+		            a[i]= num;
 		 
 		 
 		 
@@ -41,54 +51,78 @@ class Codechef
 		 
 		 
 		 
-		 i++;   
-		}
+		        i++;   
+		    }
 		
 		
 		Arrays.sort(a);
 		
 		
-		 
-		int k=(T/2) ;
+		Long b[]=new   Long[T];
 		
-		
-		int min =a[k];
-		
-		
-		
-		
-		
-		
-		
-		
-		int sum=0;
-		
-		
-		i=0;
-		
+			i=0;
+		  j = T;
 		while(i<T)
 		{
-		    if(a[i]>=min)
-		    {
-		         sum+=min;
-		    }
+		   
+		    b[j-1]=a[i];
+		    
+		    
+		  
 		    
 		    
 		    
 		    
+		    j = j - 1;
 		  
 		   i++;
 		}
 		
+			i=0;
+		
+		while(i<T)
+		{
+		   
+		    b[i]=b[i]*(i+1);
+		    
+		    
+		  
+		    
+		    
+		    
+		    
+		     
+		  
+		   i++;
+		}
+		
+		Arrays.sort(b);
+		
+	//	String stringArr = Arrays.toString(b); 
+  
+        // print the String representation 
+       // System.out.println("Array: " + stringArr);
+		 
+		
+		
+	
 		
 		
 		
-		System.out.println(sum);
+	 	System.out.println(b[T-1]);
 		
 		
 		
 		
 		
 		
-	}
+    	}
+	 
+		else
+		{
+		    System.exit(0);
+		}
+		
+	 	
+}
 }
