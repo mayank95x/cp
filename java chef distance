@@ -1,0 +1,91 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		
+	    int T = sc.nextInt();
+		
+    	for(int i=0;i<T;i++)
+        {
+            
+            double R = sc.nextDouble();
+            
+            
+            int a[]=new int[2];
+            int b[]=new int[2];
+            int c[]=new int[2];
+            
+            a[0]=sc.nextInt();
+            a[1]=sc.nextInt();
+          
+            b[0]=sc.nextInt();
+            b[1]=sc.nextInt();
+            
+            c[0]=sc.nextInt();
+            c[1]=sc.nextInt();
+            
+            
+           double d1= Math.sqrt(    (a[0]-b[0])*(a[0]-b[0]) + (a[1]-b[1])*(a[1]-b[1])  );
+            
+            double d2= Math.sqrt(    (b[0]-c[0])*(b[0]-c[0]) + (b[1]-c[1])*(b[1]-c[1]));
+            
+            double d3= Math.sqrt(  (a[0]-c[0])*(a[0]-c[0]) + (a[1]-c[1])*(a[1]-c[1]) );
+            
+             
+            
+            
+            int count=0;
+            
+            if( d1<=R  )
+            {
+                count+=1;
+            }
+         
+             if( d2<=R  )
+            {
+                count+=1;
+            }
+             if( d3<=R  )
+            {
+                count+=1;
+            }
+            
+            
+            if(count>1)
+            {
+                System.out.println("yes");
+            }
+            else
+            {
+                System.out.println("no");
+            }
+            
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	}
+}
