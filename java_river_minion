@@ -1,0 +1,80 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner scan = new Scanner(System.in);
+		
+	    int	N = scan.nextInt();
+
+	    int m=scan.nextInt();
+		    
+		int c=scan.nextInt();
+		
+		
+		int minion[]=new int[N];
+		
+			int pSum=0;
+		int nSum=0;
+		
+		for(int i=0;i<N;i++)
+        {
+		
+		
+    		int X=scan.nextInt();
+    		int Y=scan.nextInt();
+		    int P=scan.nextInt();
+		    
+		    int val=-m*X+Y-c;
+		    
+		    int sign =0;
+		    
+		    if(val>0)
+		    {
+		        sign=1;
+		    }
+		    else
+		    {
+		        sign=-1;
+		    }
+		    
+		    
+		    minion[i]=sign*P;
+		    
+		    if(minion[i]>0)
+		    {
+		        pSum+=minion[i];
+		    }
+		    else
+		    {
+		        nSum+=minion[i];
+		    }
+		    
+		    
+        }
+		
+	
+	    nSum=-1*nSum;
+		
+		if(pSum>nSum)
+		{
+		    System.out.println(pSum);
+		}
+		else
+		{
+		    System.out.println(nSum);
+		}
+		
+		
+		
+		
+		
+		
+	}
+}
