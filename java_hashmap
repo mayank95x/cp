@@ -1,0 +1,68 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+		int t=Integer.parseInt(in.readLine());
+		while(t-->0)
+		{
+		    int n=Integer.parseInt(in.readLine());
+		    HashMap<String,Integer> map=new HashMap<>();
+		    int total=0;
+		    for(int j=0;j<n;j++)
+		    {
+		        String s=in.readLine();
+		        int val=0;
+		        if(map.containsKey(s))
+		        {
+		            val=map.get(s)/2;
+		        }
+		        else
+		        {
+		            int l=0,r=0;
+		            
+		            for(int i=0;i<s.length();i++)
+		            {
+		                if(s.charAt(i)=='d' || s.charAt(i)=='f')
+		                {
+		                    if(l==1)
+		                        val += 4;
+		                    else
+		                    {
+		                        val += 2;
+		                        l=1;
+		                        r=0;
+		                    }
+		                }
+		                else if(s.charAt(i)=='j' || s.charAt(i)=='k')
+		                {
+		                    if(r==1)
+		                        val += 4;
+		                    else
+		                    {
+		                        val += 2;
+		                        r=1;
+		                        l=0;
+		                    }
+		                }
+		            }
+		            map.put(s,val);
+		            
+		        }
+		        total+=val;
+		        //System.out.println(map);
+		        //System.out.println(total);
+		    }
+		    //System.out.println(total);
+		    System.out.println(total);
+		    //System.out.println(map);
+		}
+	}
+}
