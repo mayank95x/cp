@@ -1,0 +1,30 @@
+import java.io.*;
+import java.math.*;
+import java.util.*;
+import java.lang.*;
+class Sample {
+	
+	public static void main (String args[]) throws NumberFormatException, IOException{
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int t = Integer.parseInt(br.readLine());
+		while(t-->0){
+			StringTokenizer st = new StringTokenizer(br.readLine());
+				int x =Integer.parseInt(st.nextToken());
+				int y =Integer.parseInt(st.nextToken());
+				int xcount=0, ycount=0;
+				while(x!=y){
+					if(x>y){
+						x/=2;
+						xcount++;
+					}
+					else if(x<y){
+						y/=2;
+						ycount++;
+					}
+				}
+				int res = xcount + ycount;
+				System.out.println(res);
+		}
+	}	
+}
